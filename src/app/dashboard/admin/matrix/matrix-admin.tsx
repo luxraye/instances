@@ -62,7 +62,6 @@ export function MatrixAdmin({ initialDimensions }: { initialDimensions: Dim[] })
             />
             <p className="text-xs mt-1" style={{ color: "#9ca3af" }}>Lowercase letters, numbers and hyphens only</p>
           </div>
-          </div>
         </div>
         {error && <p className="text-xs text-red-700 bg-red-50 border border-red-200 rounded px-3 py-2">{error}</p>}
         <button
