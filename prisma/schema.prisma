@@ -6,7 +6,7 @@ datasource db {
   // For production, change provider to "postgresql" and update DATABASE_URL.
   // Then run: npx prisma migrate deploy
   // See .env.example for the full connection string format.
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
