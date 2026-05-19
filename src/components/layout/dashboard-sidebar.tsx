@@ -105,7 +105,10 @@ export function DashboardSidebar({ role, userName, userEmail }: Props) {
       style={{
         background: "#213976",
         width: collapsed ? "64px" : "240px",
-        minHeight: "100vh",
+        height: "100vh",
+        position: "sticky",
+        top: 0,
+        overflowY: "hidden",
       }}
     >
       {/* Logo */}
