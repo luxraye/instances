@@ -349,7 +349,7 @@ function TemplateBuilderTab({ onDeploy }: { onDeploy: (t: SandboxTemplate) => vo
             value={template.name}
             onChange={(e) => setTemplate((t) => ({ ...t, name: e.target.value }))}
             className="w-full px-3 py-2 rounded-lg text-sm border focus:outline-none focus:ring-2"
-            style={{ borderColor: "#d9dde3", focusRingColor: "#006bb7" }}
+            style={{ borderColor: "#d9dde3" }}
             placeholder="e.g. ISO 9001 Surveillance Report"
           />
         </div>
