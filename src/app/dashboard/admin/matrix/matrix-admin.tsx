@@ -1,3 +1,4 @@
+// src/app/dashboard/admin/matrix/matrix-admin.tsx
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -55,8 +56,12 @@ export function MatrixAdmin({ initialDimensions }: { initialDimensions: Dim[] })
             <input
               className={inputCls} style={inputStyle}
               placeholder="e.g. sector"
-              value={slug} onChange={(e) => setSlug(e.target.value)} required
+              value={slug}
+              onChange={(e) => setSlug(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ""))}
+              required
             />
+            <p className="text-xs mt-1" style={{ color: "#9ca3af" }}>Lowercase letters, numbers and hyphens only</p>
+          </div>
           </div>
         </div>
         {error && <p className="text-xs text-red-700 bg-red-50 border border-red-200 rounded px-3 py-2">{error}</p>}
@@ -143,7 +148,7 @@ function DimensionBlock({ dimension, onRefresh }: { dimension: Dim; onRefresh: (
             className="rounded-lg border px-3 py-2 text-sm outline-none"
             style={{ borderColor: "#d9dde3", background: "#ffffff" }}
             placeholder="e.g. food-agro"
-            value={code} onChange={(e) => setCode(e.target.value)} required
+            value={code} onChange={(e) => setCode(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ""))} required
           />
         </div>
         <button
